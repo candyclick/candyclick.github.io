@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Terms of Use — Candy Clicker</title>
+  <meta name="description" content="Terms of Use for Candy Clicker. Read our rules and guidelines for playing our free online idle clicker game.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://candyclick.github.io/terms">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .legal-content {
+      padding-top: 8rem;
+      padding-bottom: 5rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .legal-card {
+      background: #ffffff;
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow);
+      border: 2px solid rgba(255, 110, 180, 0.1);
+    }
+    .legal-card h2 {
+      font-family: var(--font-head);
+      color: var(--dark);
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 0.8rem;
+    }
+    .legal-card h2:first-of-type {
+      margin-top: 0;
+    }
+    .legal-card p {
+      color: var(--text);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+    }
+    .legal-card ul {
+      margin-bottom: 1.2rem;
+      padding-left: 1.5rem;
+    }
+    .legal-card li {
+      list-style-type: disc;
+      color: var(--text);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+    .last-updated {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Floating candy background -->
+<div class="candy-bg-float" aria-hidden="true" id="candyBg"></div>
+
+<!-- Header -->
+<header id="site-header" role="banner"></header>
+
+<main id="main-content">
+  <section class="legal-content">
+    <div class="section-container">
+      <div class="text-center" style="margin-bottom: 2rem;">
+        <div class="section-tag">Agreement</div>
+        <h1 class="section-title">Terms of <span>Use</span></h1>
+      </div>
+
+      <div class="legal-card">
+        <div class="last-updated">Last Updated: May 27, 2026</div>
+
+        <p>Welcome to Candy Clicker! By navigating through candyclick.github.io, accessing our system properties, or clicking our virtual candies, you explicitly acknowledge and agree to abide by the standard rules and regulations specified in this document.</p>
+
+        <h2>1. Access and License Terms</h2>
+        <p>We accord you a non-exclusive, fully revocable, non-transferable personal license to play Candy Clicker strictly through standard online web viewing frameworks. This game is provided for casual entertainment purposes only.</p>
+        <p>You agree not to duplicate, reverse engineer, scrap, copy, distribute, sell, or repackage any software layers, code blocks, artwork, or game configurations without explicit validation from the site authors.</p>
+
+        <h2>2. Acceptable Playing Conduct</h2>
+        <p>We encourage friendly competition on the leaderboards, but expect integrity. You agree to interact with the game cleanly. Prohibited behaviors include:</p>
+        <ul>
+          <li>Using automated injection scripts, continuous macro systems, malicious click-bots, or server hacks to manipulate score values unnaturally.</li>
+          <li>Attempting to disrupt or crash the frontend layout or bypass code tracking mechanisms.</li>
+          <li>Using offensive, explicit, or inappropriate handles/usernames when submitting scores onto our global ranking sheets.</li>
+        </ul>
+
+        <h2>3. Local Data and Saved States</h2>
+        <p>As documented inside our structural specifications, game data saves are handled locally within your own browser profile via <code>localStorage</code>. We are not liable or responsible for sudden score resets, deleted files, browser configuration failures, or hardware wipes that result in a loss of candy production progress.</p>
+
+        <h2>4. Intellectual Property</h2>
+        <p>All structural designs, programmatic branding layers, standard source text scripts, and interactive custom assets belong exclusively to CandyClicker.github.io. Any photography assets mixed into our framework layout pages remain the certified properties of their initial visual authors via Unsplash terms.</p>
+
+        <h2>5. Disclaimer of Warranties</h2>
+        <p>Candy Clicker is served on an <strong>"As Is"</strong> and <strong>"As Available"</strong> delivery path. We make zero absolute assurances or explicit guarantees that our game loop will run perpetually error-free, uninterrupted, or absolutely guarded against standard programmatic bugs.</p>
+
+        <h2>6. Limitations of Liability</h2>
+        <p>To the max parameters permissible under existing governance frameworks, the creators, developers, and hosts of Candy Clicker shall not be held legally answerable for structural system failures, browser damage, lost local progress data, or psychological cravings for actual sugary sweets resulting from prolonged gameplay sessions.</p>
+
+        <h2>7. Adjustments to Terms</h2>
+        <p>We preserve full editorial oversight to alter these operational parameters at any time. Your subsequent usage of this platform following formal document modification confirms that you embrace the revised terms.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer id="site-footer" role="contentinfo"></footer>
+
+<!-- Scripts -->
+<script src="js/header.js"></script>
+<script src="js/footer.js"></script>
+<script>
+// Animated floating candy background
+(function() {
+  const bg = document.getElementById('candyBg');
+  const emojis = ['🍭','🍬','🍫','🧁','🍩','🍪','🍡','🌈'];
+  for (let i = 0; i < 18; i++) {
+    const s = document.createElement('span');
+    s.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    s.style.left = Math.random() * 100 + '%';
+    s.style.animationDuration = (12 + Math.random() * 18) + 's';
+    s.style.animationDelay = -(Math.random() * 30) + 's';
+    s.style.fontSize = (1.2 + Math.random() * 1.5) + 'rem';
+    bg.appendChild(s);
+  }
+})();
+</script>
+</body>
+</html>
