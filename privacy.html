@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Privacy Policy — Candy Clicker</title>
+  <meta name="description" content="Privacy Policy for Candy Clicker. Learn how we handle information when you play our free online idle clicker game.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://candyclick.github.io/privacy">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .legal-content {
+      padding-top: 8rem;
+      padding-bottom: 5rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .legal-card {
+      background: #ffffff;
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow);
+      border: 2px solid rgba(255, 110, 180, 0.1);
+    }
+    .legal-card h2 {
+      font-family: var(--font-head);
+      color: var(--dark);
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 0.8rem;
+    }
+    .legal-card h2:first-of-type {
+      margin-top: 0;
+    }
+    .legal-card p {
+      color: var(--text);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+    }
+    .legal-card ul {
+      margin-bottom: 1.2rem;
+      padding-left: 1.5rem;
+    }
+    .legal-card li {
+      list-style-type: disc;
+      color: var(--text);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+    .last-updated {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Floating candy background -->
+<div class="candy-bg-float" aria-hidden="true" id="candyBg"></div>
+
+<!-- Header -->
+<header id="site-header" role="banner"></header>
+
+<main id="main-content">
+  <section class="legal-content">
+    <div class="section-container">
+      <div class="text-center" style="margin-bottom: 2rem;">
+        <div class="section-tag">Privacy</div>
+        <h1 class="section-title">Privacy <span>Policy</span></h1>
+      </div>
+
+      <div class="legal-card">
+        <div class="last-updated">Last Updated: May 27, 2026</div>
+
+        <p>Welcome to Candy Clicker (available at candyclick.github.io). We are dedicated to maintaining the privacy and security of your experience while you build your sweet sugar empire. This Privacy Policy details how information is handled when you interact with our web-based game.</p>
+
+        <h2>1. Information We Collect (Or Don't Collect!)</h2>
+        <p>Candy Clicker is a non-account-based, free browser game. Here is exactly what happens with your data:</p>
+        <ul>
+          <li><strong>No Personal Information:</strong> We do not require account registration, email sign-ups, or login credentials. We do not gather personal identifiers such as your name, email address, physical location, or telephone number.</li>
+          <li><strong>Local Game Storage:</strong> Your game progression (your collected candies, purchased factories, earned achievements, and unlocked upgrades) is stored directly and exclusively within your own web browser utilizing <code>localStorage</code>. This data never touches an external server.</li>
+        </ul>
+
+        <h2>2. Cookies and Analytics</h2>
+        <p>We believe in maintaining a clean, privacy-first gaming arena. While the game itself does not use tracking cookies, our hosting infrastructure (GitHub Pages) or potential third-party additions may compile basic server logs:</p>
+        <ul>
+          <li><strong>Anonymized Metrics:</strong> Standard parameters like your anonymized IP address, web browser variety, referring URLs, and timestamps may be tracked by hosting architecture to protect against malicious traffic or monitor global load.</li>
+          <li><strong>Analytics tools:</strong> If we deploy anonymized analytics in the future to gauge overall player interest (e.g., figuring out which candy building is the most popular purchase), the compiled statistics will strictly be aggregate, non-personal data.</li>
+        </ul>
+
+        <h2>3. Third-Party Services and External Links</h2>
+        <p>Our website features elements from external networks (such as images loaded via Unsplash, or embedded fonts loaded via Google Fonts). These networks process connection requests directly through your browser, governed by their respective corporate privacy policies.</p>
+
+        <h2>4. Protecting Children's Privacy</h2>
+        <p>Candy Clicker provides a safe, clean environment suitable for players of all ages. Because we do not solicit, save, or manage personal metrics of any classification, we do not intentionally or unintentionally collect info from children under the age of 13.</p>
+
+        <h2>5. Your Control Over Progress Data</h2>
+        <p>You maintain ultimate authority over your digital footprint. If you desire to completely wipe your operational game records, you can effortlessly clear your web browser's storage cache, or execute the built-in, physical <strong>"Reset Game"</strong> feature stationed on our main interactive dashboard.</p>
+
+        <h2>6. Policy Modifications</h2>
+        <p>We reserve the option to modify this policy documentation down the line to reflect interface enhancements or legal compliance changes. If modifications are applied, they will immediately activate upon posting this file live to our root URL address.</p>
+
+        <h2>7. Reaching Out</h2>
+        <p>Should you have burning questions or open suggestions concerning this Privacy structure, feel free to submit feedback or raise issues directly through our public GitHub repository project boards.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer id="site-footer" role="contentinfo"></footer>
+
+<!-- Scripts -->
+<script src="js/header.js"></script>
+<script src="js/footer.js"></script>
+<script>
+// Animated floating candy background
+(function() {
+  const bg = document.getElementById('candyBg');
+  const emojis = ['🍭','🍬','🍫','🧁','🍩','🍪','🍡','🌈'];
+  for (let i = 0; i < 18; i++) {
+    const s = document.createElement('span');
+    s.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    s.style.left = Math.random() * 100 + '%';
+    s.style.animationDuration = (12 + Math.random() * 18) + 's';
+    s.style.animationDelay = -(Math.random() * 30) + 's';
+    s.style.fontSize = (1.2 + Math.random() * 1.5) + 'rem';
+    bg.appendChild(s);
+  }
+})();
+</script>
+</body>
+</html>
