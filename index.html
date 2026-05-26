@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Primary Meta Tags -->
+  <title>Candy Clicker — Free Online Idle Clicker Game | CandyClick.github.io</title>
+  <meta name="title" content="Candy Clicker — Free Online Idle Clicker Game | CandyClick.github.io">
+  <meta name="description" content="Play Candy Clicker free online! Click candies, unlock upgrades, collect 8+ types of candy, earn achievements and climb the leaderboard. No download needed — play instantly in your browser!">
+  <meta name="keywords" content="candy clicker, idle clicker game, candy clicking game, free browser game, candy game online, idle game, clicker game, candy factory game, sugar clicker, lollipop clicker, chocolate clicker">
+  <meta name="author" content="CandyClicker.github.io">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://candyclick.github.io/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://candyclick.github.io/">
+  <meta property="og:title" content="Candy Clicker — Free Online Idle Clicker Game">
+  <meta property="og:description" content="Click candies, unlock upgrades, and build your sweet empire! Play free, no download needed.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1582058091597-8f5c1c7a1c4d?w=1200&q=80">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://candyclick.github.io/">
+  <meta property="twitter:title" content="Candy Clicker — Free Online Idle Clicker Game">
+  <meta property="twitter:description" content="Click candies, unlock upgrades, and build your sweet empire! Play free, no download needed.">
+  <meta property="twitter:image" content="https://images.unsplash.com/photo-1582058091597-8f5c1c7a1c4d?w=1200&q=80">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Candy Clicker",
+    "description": "A free browser-based idle clicker game where players click on candies to earn points, unlock upgrades, and build a candy empire. Features 8+ candy types, upgrades, achievements, and leaderboards.",
+    "url": "https://candyclick.github.io/",
+    "genre": ["Idle Game", "Clicker Game", "Casual Game"],
+    "gamePlatform": ["Web Browser", "Mobile Browser"],
+    "applicationCategory": "Game",
+    "operatingSystem": "Any (Browser-based)",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "CandyClicker",
+      "url": "https://candyclick.github.io/"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "12400",
+      "bestRating": "5"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Candy Clicker free to play?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! Candy Clicker is 100% free to play in your web browser with no downloads, no installs, and no hidden fees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I earn more candies in Candy Clicker?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Click the main candy to earn candies manually. Purchase buildings like Gummy Bears, Chocolate Bars, and Cupcakes to earn candies automatically per second. Buy upgrades to multiply your earnings."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Candy Clicker work on mobile?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! Candy Clicker is fully responsive and works great on smartphones and tablets. Just open your browser and play instantly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will my progress be saved?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, your game progress is automatically saved to your browser's local storage every 10 seconds, so you can close the tab and return later."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://candyclick.github.io/"},
+      {"@type":"ListItem","position":2,"name":"Play Game","item":"https://candyclick.github.io/#game"},
+      {"@type":"ListItem","position":3,"name":"Candy Types","item":"https://candyclick.github.io/#candies"}
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- Floating candy background -->
+<div class="candy-bg-float" aria-hidden="true" id="candyBg"></div>
+
+<!-- Header -->
+<header id="site-header" role="banner"></header>
+
+<!-- ============ HERO SECTION ============ -->
+<main id="main-content">
+<section class="hero" id="hero" aria-labelledby="heroHeading">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge" role="status">🍭 #1 Free Candy Clicker Game</div>
+      <h1 id="heroHeading">
+        Click Your Way to a<br>
+        <span class="highlight">Sweet Empire!</span>
+      </h1>
+      <p class="hero-desc">
+        Welcome to Candy Clicker — the most addictive free idle clicker game online. Click the candy, unlock powerful upgrades, collect rare treats, and build the ultimate candy factory. No downloads. Pure sugary fun!
+      </p>
+      <div class="hero-btns">
+        <a href="#game" class="btn-primary">🍭 Play Now — It's Free!</a>
+        <a href="#how-to-play" class="btn-secondary">📖 How to Play</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="num">8+</div>
+          <div class="label">Candy Types</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">10+</div>
+          <div class="label">Upgrades</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">8</div>
+          <div class="label">Achievements</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">∞</div>
+          <div class="label">Fun Guaranteed</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-candy-ring">
+        <div class="ring-glow"></div>
+        <img
+          src="https://images.unsplash.com/photo-1582058091597-8f5c1c7a1c4d?w=500&q=80"
+          alt="Colorful candy lollipop"
+          class="hero-main-candy-img"
+          id="heroCandy"
+          loading="eager"
+        >
+        <span class="orbit-candy" style="animation-duration:6s; animation-delay:0s;">🍬</span>
+        <span class="orbit-candy" style="animation-duration:8s; animation-delay:-2s;">🍫</span>
+        <span class="orbit-candy" style="animation-duration:7s; animation-delay:-4s;">🧁</span>
+        <span class="orbit-candy" style="animation-duration:9s; animation-delay:-1s;">🍩</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GAME SECTION ============ -->
+<section id="game" aria-labelledby="gameHeading">
+  <div class="section-container">
+    <div class="text-center" style="margin-bottom:2.5rem;">
+      <div class="section-tag">🎮 Play Now</div>
+      <h2 class="section-title" id="gameHeading">Candy Clicker <span>Game</span></h2>
+      <p class="section-subtitle">Click the candy to earn sweets! Buy buildings for passive income, unlock upgrades to multiply your earnings, and watch your candy empire grow.</p>
+    </div>
+
+    <div class="game-wrapper">
+      <!-- Left sidebar: Shop -->
+      <aside class="game-sidebar" aria-label="Candy Shop">
+        <div class="sidebar-title">🏪 Candy Shop</div>
+        <div class="shop-items" id="shopItems" role="list" aria-label="Available candy buildings"></div>
+      </aside>
+
+      <!-- Center: Main game -->
+      <div class="game-center">
+        <!-- Candy counter -->
+        <div class="candy-counter" role="status" aria-live="polite" aria-label="Candy counter">
+          <div class="counter-label">Candies</div>
+          <div class="counter-number" id="statCandies">0</div>
+          <div class="counter-cps" id="statCPS">0/s production</div>
+        </div>
+
+        <!-- Main clickable candy -->
+        <div class="main-candy-area">
+          <img
+            src="https://images.unsplash.com/photo-1582058091597-8f5c1c7a1c4d?w=400&q=80"
+            alt="Click the candy to earn sweets!"
+            id="mainCandy"
+            role="button"
+            tabindex="0"
+            aria-label="Click candy to earn sweets"
+          >
+        </div>
+        <p class="click-hint">👆 Click the candy!</p>
+
+        <!-- Progress -->
+        <div style="width:100%">
+          <div class="progress-bar-wrap" role="progressbar" aria-label="Progress to next milestone">
+            <div class="progress-bar-fill" id="progressBar"></div>
+          </div>
+          <p id="progressLabel" style="font-size:0.8rem;color:var(--muted);text-align:center;margin-top:0.3rem;"></p>
+        </div>
+
+        <!-- Mini stats -->
+        <div class="game-stats-mini">
+          <div class="stat-mini"><div class="val" id="statTotal">0</div><div class="key">Total Earned</div></div>
+          <div class="stat-mini"><div class="val" id="statClicks">0</div><div class="key">Total Clicks</div></div>
+          <div class="stat-mini"><div class="val" id="statClickPower">+1</div><div class="key">Click Power</div></div>
+          <div class="stat-mini"><div class="val" id="statBuildings">0</div><div class="key">Buildings</div></div>
+        </div>
+
+        <button id="resetGame" class="btn-reset" aria-label="Reset game progress">🔄 Reset Game</button>
+      </div>
+
+      <!-- Right sidebar: Upgrades & Achievements -->
+      <aside class="game-sidebar" aria-label="Upgrades and achievements">
+        <div class="sidebar-title">⚡ Upgrades</div>
+        <div class="upgrade-items" id="upgradeItems" role="list" aria-label="Available upgrades"></div>
+
+        <div class="sidebar-title" style="margin-top:1.5rem;">🏆 Achievements</div>
+        <div class="achievement-items" id="achievementItems" role="list" aria-label="Achievement badges"></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CANDY TYPES SECTION ============ -->
+<section id="candies" aria-labelledby="candiesHeading">
+  <div class="section-container">
+    <div class="text-center">
+      <div class="section-tag">🍬 Collection</div>
+      <h2 class="section-title" id="candiesHeading">Discover All <span>Candy Types</span></h2>
+      <p class="section-subtitle">Collect and unlock 8 delicious candy varieties — each with unique production rates, flavors, and personality. From humble gummy bears to cosmic macarons!</p>
+    </div>
+    <div class="candies-grid">
+      <article class="candy-card">
+        <img src="https://images.unsplash.com/photo-1582058091597-8f5c1c7a1c4d?w=400&q=80" alt="Lollipop candy" class="candy-card-img" loading="lazy">
+        <span class="candy-card-badge">⭐ Starter</span>
+        <div class="candy-card-body">
+          <h3 class="candy-card-name">🍭 Lollipop</h3>
+          <p class="candy-card-desc">The classic swirly lollipop that started it all. Click it to earn your first candies — the gateway to a sugary empire.</p>
+          <div class="candy-card-stats">
+            <span class="candy-stat">Manual Click</span>
+            <span class="candy-stat">Starter Candy</span>
+          </div>
+        </div>
+      </article>
+      <article class="candy-card">
+        <img src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=400&q=80" alt="Gummy bears candy" class="candy-card-img" loading="lazy">
+        <span class="candy-card-badge">+1/sec</span>
+        <div class="candy-card-body">
+          <h3 class="candy-card-name">🐻 Gummy Bear</h3>
+          <p class="candy-card-desc">Chewy, colorful gummy bears that automatically produce candies. The perfect first investment for any candy tycoon.</p>
+          <div class="candy-card-stats">
+            <span class="candy-stat">1 candy/sec</span>
+            <span class="candy-stat">Cost: 15</span>
+          </div>
+        </div>
+      </article>
+      <article class="candy-card">
+        <img src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=400&q=80" alt="Chocolate bar" class="candy-card-img" loading="lazy">
+        <span class="candy-card-badge">+5/sec</span>
+        <div class="candy-card-body">
+          <h3 class="candy-card-name">🍫 Chocolate Bar</h3>
+          <p class="candy-card-desc">Rich, velvety dark chocolate bars that melt into sweet candy production. A power-up for serious players.</p>
+          <div class="candy-card-stats">
+            <span class="candy-stat">5 candy/sec</span>
+            <span class="candy-stat">Cost: 100</span>
+          </div>
+        </div>
+      </article>
+      <article class="candy-card">
+        <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=400&q=80" alt="Cupcake with frosting" class="candy-card-img" loading="lazy">
+        <span class="candy-card-badge">+15/sec</span>
+        <div class="candy-card-body">
+          <h3 class="candy-card-name">🧁 Cupcake</h3>
+          <p class="candy-card-desc">Frosted mini-cupcakes with rainbow sprinkles. Each cupcake bakery produces a whopping 15 candies per second!</p>
+          <div class="candy-card-stats">
+            <span class="candy-stat">15 candy/sec</span>
+            <span class="candy-stat">Cost: 500</span>
+          </div>
+        </div>
+      </article>
+      <article class="candy-card">
+        <img src="https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=400&q=80" alt="Ice cream cone" class="candy-card-img" loading="lazy">
+        <span class="candy-card-badge">+40/sec</span>
+        <div class="candy-card-body">
+          <h3 class="candy-card-name">🍦 Ice Cream</h3>
+          <p class="candy-card-desc">Creamy swirled ice cream cones packed with candy flavors. Advanced producers that dramatically accelerate your output.</p>
+          <div class="candy-card-stats">
+            <span class="candy-stat">40 candy/sec</span>
+            <span class="candy-stat">Cost: 2,000</span>
+          </div>
+        </div>
+      </article>
+      <article class="candy-card">
+        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400&q=80" alt="Glazed donut" class="candy-card-img" loading="lazy">
+        <span class="candy-card-badge">+100/sec</span>
+        <div class="candy-card-body">
+          <h3 class="candy-card-name">🍩 Donut</h3>
+          <p class="candy-card-desc">Glazed, rainbow-sprinkled donuts that spin out 100 candies per second. The hallmark of a true candy magnate.</p>
+          <div class="candy-card-stats">
+            <span class="candy-stat">100 candy/sec</span>
+            <span class="candy-stat">Cost: 8,000</span>
+          </div>
+        </div>
+      </article>
+      <article class="candy-card">
+        <img src="https://images.unsplash.com/photo-1512389098783-66b81f86e199?w=400&q=80" alt="Candy cane" class="candy-card-img" loading="lazy">
+        <span class="candy-card-badge">+250/sec</span>
+        <div class="candy-card-body">
+          <h3 class="candy-card-name">🎄 Candy Cane</h3>
+          <p class="candy-card-desc">Peppermint-striped candy canes with magical production powers. Unlock these rare treats to skyrocket your candy income.</p>
+          <div class="candy-card-stats">
+            <span class="candy-stat">250 candy/sec</span>
+            <span class="candy-stat">Cost: 30,000</span>
+          </div>
+        </div>
+      </article>
+      <article class="candy-card">
+        <img src="https://images.unsplash.com/photo-1558326567-98ae2405596b?w=400&q=80" alt="French macaron" class="candy-card-img" loading="lazy">
+        <span class="candy-card-badge">👑 Rare</span>
+        <div class="candy-card-body">
+          <h3 class="candy-card-name">🌈 Macaron</h3>
+          <p class="candy-card-desc">Exquisite French macarons infused with cosmic sugar. The ultimate status symbol — 600 candies per second of pure luxury.</p>
+          <div class="candy-card-stats">
+            <span class="candy-stat">600 candy/sec</span>
+            <span class="candy-stat">Cost: 100,000</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW TO PLAY SECTION ============ -->
+<section id="how-to-play" aria-labelledby="howHeading">
+  <div class="section-container">
+    <div class="text-center">
+      <div class="section-tag">📖 Guide</div>
+      <h2 class="section-title" id="howHeading">How to Play <span>Candy Clicker</span></h2>
+      <p class="section-subtitle">Getting started is easy — just click! Here's a quick guide to mastering the art of candy collection and building your sweet empire from scratch.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <div class="step-icon">👆</div>
+        <h3 class="step-title">Click the Candy</h3>
+        <p class="step-desc">Start by clicking the giant candy in the center of the game. Each click earns you candies. The more you click, the faster your collection grows!</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <div class="step-icon">🏪</div>
+        <h3 class="step-title">Buy Buildings</h3>
+        <p class="step-desc">Spend your candies in the shop to purchase buildings like Gummy Bears and Chocolate Bars. They produce candies automatically — even when you're away!</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <div class="step-icon">⚡</div>
+        <h3 class="step-title">Unlock Upgrades</h3>
+        <p class="step-desc">Purchase powerful upgrades that multiply your click power and boost your production buildings. Upgrades are key to reaching the higher candy milestones.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">4</div>
+        <div class="step-icon">🏆</div>
+        <h3 class="step-title">Earn Achievements</h3>
+        <p class="step-desc">Hit milestones to unlock achievements and show off your candy mastery. Each achievement brings you prestige and celebrates your progress.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">5</div>
+        <div class="step-icon">🌟</div>
+        <h3 class="step-title">Catch Candy Rain!</h3>
+        <p class="step-desc">Random bonus events shower you with free candy bonuses. Stay active and keep your eye out for the magical Candy Rain event for huge windfalls!</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">6</div>
+        <div class="step-icon">👑</div>
+        <h3 class="step-title">Top the Leaderboard</h3>
+        <p class="step-desc">Compete with other players for the top spot on the leaderboard. Earn the most total candies ever to claim your crown as the ultimate Candy Clicker champion!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES SECTION ============ -->
+<section id="features" aria-labelledby="featuresHeading">
+  <div class="section-container">
+    <div class="text-center">
+      <div class="section-tag">✨ Features</div>
+      <h2 class="section-title" id="featuresHeading">Why Players <span>Love</span> Candy Clicker</h2>
+      <p class="section-subtitle">Candy Clicker is packed with features that keep you coming back for more sugar! Here's what makes our idle clicker game the sweetest experience online.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🎮</div>
+        <h3 class="feature-title">Instant Play — No Download</h3>
+        <p class="feature-desc">Jump straight into the fun! Candy Clicker runs entirely in your web browser. No downloads, no installs, no sign-ups required. Just open and play.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3 class="feature-title">Mobile-Friendly Design</h3>
+        <p class="feature-desc">Play anywhere, anytime. Candy Clicker is fully optimized for smartphones and tablets. Tap-to-click works perfectly on touchscreens of all sizes.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💾</div>
+        <h3 class="feature-title">Auto-Save Progress</h3>
+        <p class="feature-desc">Never lose your hard-earned candy! Your progress is automatically saved to your browser every 10 seconds. Close the tab and return right where you left off.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3 class="feature-title">10+ Powerful Upgrades</h3>
+        <p class="feature-desc">From Sugar Rush to Cosmic Sugar, unlock game-changing upgrades that multiply your click power up to 10× and send your production into the stratosphere.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌟</div>
+        <h3 class="feature-title">Random Bonus Events</h3>
+        <p class="feature-desc">The Candy Rain event strikes at random, rewarding active players with massive bonus candy drops. Stay alert — fortune favors the clicker!</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏆</div>
+        <h3 class="feature-title">Achievements & Leaderboard</h3>
+        <p class="feature-desc">Unlock 8 unique achievements and compete on the global leaderboard. Track your milestones, flex your candy wealth, and aim for #1 Sugar Baron!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UPGRADES PREVIEW SECTION ============ -->
+<section id="upgrades-section" aria-labelledby="upgradesHeading">
+  <div class="section-container">
+    <div class="text-center">
+      <div class="section-tag">⚡ Power-Ups</div>
+      <h2 class="section-title" id="upgradesHeading">Game-Changing <span>Upgrades</span></h2>
+      <p class="section-subtitle">Strategically invest your candies into upgrades to exponentially multiply your production. Each upgrade brings you closer to candy dominance!</p>
+    </div>
+    <div class="upgrades-preview-grid">
+      <div class="upgrade-preview-card">
+        <div class="up-icon">⚡</div>
+        <div>
+          <div class="up-name">Sugar Rush</div>
+          <div class="up-desc">Doubles your click power instantly. The first upgrade every player should buy for maximum early-game efficiency.</div>
+          <span class="up-tag">2× Click Power</span>
+        </div>
+      </div>
+      <div class="upgrade-preview-card">
+        <div class="up-icon">🥇</div>
+        <div>
+          <div class="up-name">Golden Wrapper</div>
+          <div class="up-desc">Wrap every candy in gold for triple click value. An essential mid-game purchase for scaling your income rapidly.</div>
+          <span class="up-tag">3× Click Power</span>
+        </div>
+      </div>
+      <div class="upgrade-preview-card">
+        <div class="up-icon">🏭</div>
+        <div>
+          <div class="up-name">Gummy Factory</div>
+          <div class="up-desc">Industrial-grade gummy bear production line. Doubles all income from your Gummy Bear buildings permanently.</div>
+          <span class="up-tag">2× Gummies</span>
+        </div>
+      </div>
+      <div class="upgrade-preview-card">
+        <div class="up-icon">❄️</div>
+        <div>
+          <div class="up-name">Ice Age</div>
+          <div class="up-desc">Freeze time and triple your ice cream output. A late-game luxury that transforms ice cream into a production powerhouse.</div>
+          <span class="up-tag">3× Ice Cream</span>
+        </div>
+      </div>
+      <div class="upgrade-preview-card">
+        <div class="up-icon">🌪️</div>
+        <div>
+          <div class="up-name">Candy Storm</div>
+          <div class="up-desc">Unleash a tornado of sweets! All buildings produce 5 times more candy. Reserve this for when your empire is ready to explode.</div>
+          <span class="up-tag">5× ALL</span>
+        </div>
+      </div>
+      <div class="upgrade-preview-card">
+        <div class="up-icon">🌌</div>
+        <div>
+          <div class="up-name">Cosmic Sugar</div>
+          <div class="up-desc">Harness the power of the universe. The ultimate upgrade — 10× all production for players who have truly reached sugar godhood.</div>
+          <span class="up-tag">10× ALL 👑</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEADERBOARD SECTION ============ -->
+<section id="leaderboard" aria-labelledby="lbHeading">
+  <div class="section-container">
+    <div class="text-center">
+      <div class="section-tag">🏆 Compete</div>
+      <h2 class="section-title" id="lbHeading">Global <span>Leaderboard</span></h2>
+      <p class="section-subtitle">How does your candy empire stack up? Compete against top players worldwide and earn your spot as the ultimate Sugar Baron!</p>
+    </div>
+    <div class="leaderboard-box" role="region" aria-label="Leaderboard">
+      <div class="lb-header">🏆 Top Candy Clickers</div>
+      <div class="lb-list" id="leaderboardList" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACHIEVEMENTS SECTION ============ -->
+<section id="achievements" aria-labelledby="achHeading">
+  <div class="section-container">
+    <div class="text-center">
+      <div class="section-tag">🏅 Milestones</div>
+      <h2 class="section-title" id="achHeading">Unlock <span>Achievements</span></h2>
+      <p class="section-subtitle">Track your candy journey with unique achievement badges. Each one celebrates a milestone in your path to becoming the greatest candy collector of all time!</p>
+    </div>
+    <div class="achievements-preview">
+      <div class="ach-preview-card">
+        <div class="ach-preview-emoji">🍬</div>
+        <div class="ach-preview-name">First Bite</div>
+        <p class="ach-preview-desc">Click your very first candy and begin the sweetest adventure of your gaming life!</p>
+      </div>
+      <div class="ach-preview-card">
+        <div class="ach-preview-emoji">👶</div>
+        <div class="ach-preview-name">Sugar Baby</div>
+        <p class="ach-preview-desc">Collect 100 candies total. A tiny taste of what's to come in your candy empire!</p>
+      </div>
+      <div class="ach-preview-card">
+        <div class="ach-preview-emoji">🦷</div>
+        <div class="ach-preview-name">Sweet Tooth</div>
+        <p class="ach-preview-desc">Rack up 1,000 total candies. Your sweet tooth is developing into something legendary.</p>
+      </div>
+      <div class="ach-preview-card">
+        <div class="ach-preview-emoji">🏆</div>
+        <div class="ach-preview-name">Candy Master</div>
+        <p class="ach-preview-desc">Reach 10,000 candies. You're a bona fide master of the candy arts — impressive!</p>
+      </div>
+      <div class="ach-preview-card">
+        <div class="ach-preview-emoji">👑</div>
+        <div class="ach-preview-name">Sugar Baron</div>
+        <p class="ach-preview-desc">Collect 1,000,000 candies. The title of Sugar Baron is now yours — wear it with pride!</p>
+      </div>
+      <div class="ach-preview-card">
+        <div class="ach-preview-emoji">👆</div>
+        <div class="ach-preview-name">Click Frenzy</div>
+        <p class="ach-preview-desc">Click the candy 100 times. Your clicking dedication is truly inspiring!</p>
+      </div>
+      <div class="ach-preview-card">
+        <div class="ach-preview-emoji">🛒</div>
+        <div class="ach-preview-name">Shopper</div>
+        <p class="ach-preview-desc">Buy your first candy building and begin the automation phase of your sweet empire!</p>
+      </div>
+      <div class="ach-preview-card">
+        <div class="ach-preview-emoji">🏰</div>
+        <div class="ach-preview-name">Candy Empire</div>
+        <p class="ach-preview-desc">Own 10 buildings simultaneously. Your candy production empire is truly taking shape!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT SECTION ============ -->
+<section id="about" aria-labelledby="aboutHeading">
+  <div class="section-container">
+    <div class="about-grid">
+      <div class="about-img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1520637836993-a081443a3e15?w=700&q=80"
+          alt="Assortment of colorful candies and sweets"
+          class="about-img"
+          loading="lazy"
+        >
+      </div>
+      <div class="about-content">
+        <div class="section-tag">🍭 About</div>
+        <h2 class="section-title" id="aboutHeading">What is <span>Candy Clicker?</span></h2>
+        <p style="color:var(--muted);margin-bottom:1rem;line-height:1.7;">
+          Candy Clicker is a free, browser-based idle clicker game inspired by the classic incremental game genre. Your mission: click the giant candy to earn sweets, invest in production buildings, and grow your candy empire to astronomical proportions!
+        </p>
+        <p style="color:var(--muted);margin-bottom:1rem;line-height:1.7;">
+          Whether you're a casual player who clicks whenever inspiration strikes, or a dedicated idle gamer who min-maxes every upgrade, Candy Clicker has something for everyone. Progress continues even when you're offline, so you always return to a sweeter world.
+        </p>
+        <div class="about-list">
+          <div class="about-list-item">
+            <span class="icon">🍭</span>
+            <span>8+ unique candy types with real candy photography and distinct production values</span>
+          </div>
+          <div class="about-list-item">
+            <span class="icon">⚡</span>
+            <span>10 powerful upgrades ranging from 2× click boost to 10× cosmic production multipliers</span>
+          </div>
+          <div class="about-list-item">
+            <span class="icon">💾</span>
+            <span>Automatic local save — your progress is always safe and preserved between sessions</span>
+          </div>
+          <div class="about-list-item">
+            <span class="icon">🌟</span>
+            <span>Random Candy Rain events reward active players with generous bonus drops</span>
+          </div>
+          <div class="about-list-item">
+            <span class="icon">📱</span>
+            <span>Fully responsive design — plays beautifully on desktop, tablet, and mobile devices</span>
+          </div>
+        </div>
+        <a href="#game" class="btn-primary" style="display:inline-flex;margin-top:1rem;">🍭 Start Playing Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ SECTION ============ -->
+<section id="faq" aria-labelledby="faqHeading">
+  <div class="section-container">
+    <div class="text-center">
+      <div class="section-tag">❓ FAQ</div>
+      <h2 class="section-title" id="faqHeading">Frequently Asked <span>Questions</span></h2>
+      <p class="section-subtitle">Got questions about Candy Clicker? We've got sweet answers! Find everything you need to know about playing, saving, and mastering the game below.</p>
+    </div>
+    <div class="faq-list" role="list">
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          Is Candy Clicker really free to play? <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">Yes, 100%! Candy Clicker is completely free with no hidden costs, no in-app purchases, no subscriptions, and no annoying ads. Just pure, uninterrupted idle clicking fun in your browser.</div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          Do I need to download anything to play? <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">Absolutely not! Candy Clicker runs entirely in your web browser. Simply visit candyclick.github.io and start playing immediately. Works on Chrome, Firefox, Safari, Edge, and mobile browsers.</div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          Will my progress be saved if I close the browser? <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">Yes! Candy Clicker automatically saves your progress to your browser's local storage every 10 seconds. When you return to the game, everything will be right where you left it — candies, buildings, upgrades, and all achievements intact.</div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          What is the fastest way to earn candies? <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">The most efficient strategy is to balance active clicking with passive production. Buy buildings early to generate passive income, then invest in upgrades as soon as you can afford them. Focus on buying the Sugar Rush and Golden Wrapper upgrades first for maximum click multipliers. Watch for Candy Rain bonus events for big windfalls!</div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          Does Candy Clicker work on mobile phones? <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">Yes! Candy Clicker is fully responsive and optimized for mobile play. The tap-to-click mechanic works perfectly on touchscreens, and the layout adapts beautifully to any screen size from small phones to large tablets.</div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          What happens during a Candy Rain event? <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">Candy Rain is a random bonus event that occurs during active gameplay. When it triggers, you receive a large bonus of free candies — typically worth 10 seconds of your current production rate. The more buildings you own, the bigger the Candy Rain reward!</div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          How do I unlock the rarest candy — the Macaron? <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">The Macaron is the ultimate candy building, unlockable once you accumulate 100,000 candies. It produces an impressive 600 candies per second! To reach this level, focus on buying and upgrading all lower-tier buildings, and don't miss the Candy Storm and Cosmic Sugar upgrades which multiply all production.</div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          Can I reset and start fresh? <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">Yes, you can reset your progress at any time using the Reset Game button in the game panel. Be careful — this permanently erases all your candies, buildings, upgrades, and achievements and starts the game from scratch. Think of it as a prestige restart for a fresh challenge!</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA SECTION ============ -->
+<section style="background:linear-gradient(135deg,var(--pink),var(--purple));padding:5rem 1.5rem;text-align:center;" aria-labelledby="ctaHeading">
+  <div class="section-container">
+    <div style="font-size:3rem;margin-bottom:1rem;" aria-hidden="true">🍭🍬🍫🧁🍩</div>
+    <h2 id="ctaHeading" style="font-family:var(--font-head);font-size:clamp(2rem,4vw,3rem);color:#fff;margin-bottom:1rem;">Ready to Build Your <br>Candy Empire?</h2>
+    <p style="color:rgba(255,255,255,0.85);font-size:1.1rem;max-width:540px;margin:0 auto 2rem;line-height:1.7;">
+      Jump in for free right now — no downloads, no sign-up, no cost. Click your first candy and start building the sweetest idle empire the web has ever seen!
+    </p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="#game" style="background:#fff;color:var(--pink);padding:1rem 2.5rem;border-radius:99px;font-weight:800;font-size:1.05rem;box-shadow:0 8px 24px rgba(0,0,0,0.15);transition:all 0.2s;display:inline-flex;align-items:center;gap:0.5rem;">🍭 Play Candy Clicker Free</a>
+      <a href="#candies" style="background:rgba(255,255,255,0.15);color:#fff;padding:1rem 2.5rem;border-radius:99px;font-weight:800;font-size:1.05rem;border:2px solid rgba(255,255,255,0.4);transition:all 0.2s;display:inline-flex;align-items:center;gap:0.5rem;">🍬 Explore Candy Types</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer id="site-footer" role="contentinfo"></footer>
+
+<!-- Toast -->
+<div id="toast" role="status" aria-live="assertive" aria-atomic="true"></div>
+
+<!-- Scripts -->
+<script src="js/header.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/game.js"></script>
+<script>
+// Animated floating candy background
+(function() {
+  const bg = document.getElementById('candyBg');
+  const emojis = ['🍭','🍬','🍫','🧁','🍩','🍪','🍡','🌈'];
+  for (let i = 0; i < 18; i++) {
+    const s = document.createElement('span');
+    s.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    s.style.left = Math.random() * 100 + '%';
+    s.style.animationDuration = (12 + Math.random() * 18) + 's';
+    s.style.animationDelay = -(Math.random() * 30) + 's';
+    s.style.fontSize = (1.2 + Math.random() * 1.5) + 'rem';
+    bg.appendChild(s);
+  }
+})();
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// Keyboard support for candy click
+document.addEventListener('keydown', e => {
+  if (e.key === ' ' || e.key === 'Enter') {
+    const candy = document.getElementById('mainCandy');
+    if (document.activeElement === candy) {
+      candy.click();
+    }
+  }
+});
+</script>
+</body>
+</html>
