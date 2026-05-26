@@ -11,7 +11,7 @@ function renderFooter() {
     </div>
     <div class="footer-main">
       <div class="footer-brand">
-        <a href="index.html" class="footer-logo" aria-label="Candy Clicker">
+        <a href="/" class="footer-logo" aria-label="Candy Clicker">
           <span class="logo-icon">🍭</span>
           <span class="logo-text">Candy<span class="logo-accent">Clicker</span></span>
         </a>
@@ -25,28 +25,28 @@ function renderFooter() {
       <div class="footer-links-group">
         <h4>Play</h4>
         <ul>
-          <li><a href="#game">Start Game</a></li>
-          <li><a href="#candies">Candy Types</a></li>
-          <li><a href="#upgrades">Upgrades Shop</a></li>
-          <li><a href="#leaderboard">Leaderboard</a></li>
+          <li><a href="/#game">Start Game</a></li>
+          <li><a href="/#candies">Candy Types</a></li>
+          <li><a href="/#upgrades">Upgrades Shop</a></li>
+          <li><a href="/#leaderboard">Leaderboard</a></li>
         </ul>
       </div>
       <div class="footer-links-group">
         <h4>Discover</h4>
         <ul>
-          <li><a href="#features">Game Features</a></li>
-          <li><a href="#how-to-play">How to Play</a></li>
-          <li><a href="#achievements">Achievements</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="/#features">Game Features</a></li>
+          <li><a href="/#how-to-play">How to Play</a></li>
+          <li><a href="/#achievements">Achievements</a></li>
+          <li><a href="/#faq">FAQ</a></li>
         </ul>
       </div>
       <div class="footer-links-group">
         <h4>About</h4>
         <ul>
-          <li><a href="#about">About Candy Clicker</a></li>
-          <li><a href="mailto:hello@candyclick.github.io">Contact Us</a></li>
-          <li><a href="#privacy">Privacy Policy</a></li>
-          <li><a href="#terms">Terms of Service</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
         </ul>
       </div>
     </div>
