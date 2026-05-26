@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Primary Meta Tags -->
+  <title>About Us — Meet the Developer Behind Candy Clicker</title>
+  <meta name="title" content="About Us — Meet the Developer Behind Candy Clicker">
+  <meta name="description" content="Meet Irene Robert, the web developer and SEO expert behind Candy Clicker. Learn about the mission to build the ultimate free browser idle game.">
+  <meta name="author" content="Irene Robert">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://candyclick.github.io/about">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght=400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .about-page-hero {
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      background: linear-gradient(135deg, #fff0fb, #f0f7ff); /* Matches game section background blend */
+    }
+    .profile-section {
+      padding: 5rem 1.5rem;
+      background: #ffffff;
+    }
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 4rem;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .profile-img-wrap {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 6px solid #fff;
+    }
+    .profile-img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .profile-content h2 {
+      font-family: var(--font-head);
+      color: var(--dark);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .profile-content p {
+      color: var(--text);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+    }
+    .highlight-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--pink), var(--purple));
+      color: #fff;
+      padding: 0.35rem 1rem;
+      border-radius: 99px;
+      font-weight: 800;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 768px) {
+      .profile-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Floating candy background -->
+<div class="candy-bg-float" aria-hidden="true" id="candyBg"></div>
+
+<!-- Header -->
+<header id="site-header" role="banner"></header>
+
+<main id="main-content">
+  <!-- Hero Section -->
+  <section class="about-page-hero">
+    <div class="section-container text-center">
+      <div class="section-tag">Our Story</div>
+      <h1 class="section-title">About <span>Candy Clicker</span></h1>
+      <p class="section-subtitle">Discover the sweet inspiration behind your favorite web-based idle clicker game and meet the mind driving its development.</p>
+    </div>
+  </section>
+
+  <!-- Developer Profile Section -->
+  <section class="profile-section">
+    <div class="profile-grid">
+      <div class="profile-img-wrap">
+        <img 
+          src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80" 
+          alt="Irene Robert — Creator of Candy Clicker" 
+          class="profile-img"
+          loading="lazy"
+        >
+      </div>
+      <div class="profile-content">
+        <div class="highlight-badge">Developer & SEO Architect</div>
+        <h2>Meet Irene Robert</h2>
+        <p>
+          Hello there, fellow clicker! I'm <strong>Irene Robert</strong>, a professional web developer and SEO expert with a profound love for creating fast, highly optimized, and deeply engaging web experiences. 
+        </p>
+        <p>
+          Candy Clicker was born out of a desire to blend simple, responsive frontend mechanics with a vibrant, high-contrast visual design that runs smoothly across absolutely any modern device. As a developer, I focused heavily on micro-optimizations, ensuring quick loading speeds, responsive tap controls, and perfectly synced local data saving so your progress remains secure.
+        </p>
+        <p>
+          On the SEO front, I engineered this entire platform using advanced architecture to ensure millions of idle game enthusiasts around the world can discover our sweet candy empire effortlessly through structural discovery channels. 
+        </p>
+        <p>
+          Thank you for playing, scaling upgrades, and sharing this journey. This project is continuously scaling with new mechanics, treats, and achievements, all with the pure intent of delivering clean, unblocked fun!
+        </p>
+        <div style="margin-top: 2rem;">
+          <a href="index.html#game" class="btn-primary">🍭 Jump Back Into The Game</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer id="site-footer" role="contentinfo"></footer>
+
+<!-- Scripts -->
+<script src="js/header.js"></script>
+<script src="js/footer.js"></script>
+<script>
+// Animated floating candy background
+(function() {
+  const bg = document.getElementById('candyBg');
+  const emojis = ['🍭','🍬','🍫','🧁','🍩','🍪','🍡','🌈'];
+  for (let i = 0; i < 18; i++) {
+    const s = document.createElement('span');
+    s.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    s.style.left = Math.random() * 100 + '%';
+    s.style.animationDuration = (12 + Math.random() * 18) + 's';
+    s.style.animationDelay = -(Math.random() * 30) + 's';
+    s.style.fontSize = (1.2 + Math.random() * 1.5) + 'rem';
+    bg.appendChild(s);
+  }
+})();
+</script>
+</body>
+</html>
